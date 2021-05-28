@@ -1,0 +1,238 @@
+Bootcamp With Kotlin – DIO (Digital Innovation One)
+
+Everis Kotlin Developer - Desafios
+
+>>>>>>>>>> Desafio 1
+
+import java.util.Scanner
+fun main(args: Array<String>) { 
+val input = Scanner(System.in) 
+val a = input.nextInt() 
+val b = input.nextInt() 
+println("SOMA = "+ ( a + b )) //insira as variáveis corretamente }
+
+>>>>>>>>>> Desafio 2
+
+fun main(args: Array<String>) {
+    
+    for (i in  1 .rangeTo(readLine()!!.toInt()).step( 2 )) println(i) //complete o codigo com os valores corretos
+    
+}
+
+>>>>>>>>>> Desafio 3
+
+------ original:
+
+fun main(args: Array<String>) {
+    //insira as variaveis corretamente
+    var r = 0
+    for (i in 0..readLine()!!.toInt()) {
+
+        println("$ ${  *   } ${  *  *  }") 
+
+        r += 0
+    }
+}
+Solução:
+fun main(args: Array<String>) {
+    //insira as variaveis corretamente
+    var r = 0
+    for (i in 1..readLine()!!.toInt()) {
+
+        println("$i ${ i * i  } ${ i * i * i }") 
+
+        r += 0
+    }
+}
+
+**********
+Desafio 1 de 5
+
+Solução 1
+fun main(args: Array<String>) {
+    //continue a solução
+    fun Float.format(digits: Int) = "%.${digits}f".format(this).replace(',','.')
+    val r = readLine()!!.toFloat()
+    var i = 0F
+    
+    if (  ) {
+        i = 
+    } else if () {
+        i =
+    } else if (  ) {
+        i = 
+    } else if (r > 4500) {
+        i = (  )
+    }
+    if (i == 0F) println("Isento") else println("R$ ${i.format(2)}")
+    
+}
+
+Solução 2:
+
+fun main(args: Array<String>) {
+  fun Float.format(digits: Int) = "%.${digits}f".format(this).replace(',','.')
+  val r = readLine()!!.toFloat()
+  var i = 0F
+  
+       if (r <= 2000) println("Isento")
+  else if (r <  3000) i = (r - 2000) * 0.08F
+  else if (r <  4500) i = (r - 3000) * 0.18F + 80
+  else if (r >= 4500) i = (r - 4500) * 0.28F + 350
+  
+       if (r >  2000) println("R$ ${i.format(2)}")
+}
+
+Solução 3
+
+fun main() {
+    val read = Scanner(System.`in`)
+
+    println("Enter n:")
+    val n = read.nextInt()
+
+    if(checkPrime(n))
+        println("$n is prime")
+    else
+        println("$n is not prime")
+}
+
+
+
+
+
+
+Solução 4
+
+
+
+
+
+Antigo1:
+
+fun main(args: Array<String>) {
+    //continue a solução
+    fun Float.format(digits: Int) = "%.${digits}f".format(this).replace(',','.')
+    val r = readLine()!!.toFloat()
+    var i = 0F
+
+    if ( r <= 2000.00f) {
+        i = 0F
+    } else if ( r >= 3000.01f && r <= 4500.00f ) {
+        i = (( r-3000.00f ) * 0.18f + (3000.00f*0.08f))
+    } else if ( r >= 2000.01f && r <= 3000.00f ) {
+        i = (( r-2000.00f ) * 0.08f + (2.00f*0.18f))
+        } else if ( r > 4500.00f ) {
+        i = (( r-4500.00f )) * 0.28f
+    }
+    if (i == 0F) println("Isento") else println("R$ ${i.format(2)}")
+
+}
+
+Antigo2:
+
+fun main(args: Array<String>) {
+  fun Float.format(digits: Int) = "%.${digits}f".format(this).replace(',','.')
+  val r = readLine()!!.toFloat()
+  var i = 0F
+  
+       if (r <= 2000) println("Isento")
+  else if (r <  3000) i = (r - 2000) * 0.08F
+  else if (r <  4500) i = (r - 3000) * 0.18F + 80
+  else if (r >= 4500) i = (r - 4500) * 0.28F + 350
+  
+       if (r >  2000) println("R$ ${i.format(2)}")
+}
+
+
+***********
+Desafio 2 de 5
+Solução:
+
+import java.math.BigDecimal
+import java.math.RoundingMode
+import kotlin.math.pow
+
+fun main(args: Array<String>) {
+    
+    val raio = readLine()!!.toDouble()
+    val pi = 3.14159
+    val area = raio.pow(2) * pi
+    val resultado = BigDecimal( area  ).setScale(4, RoundingMode.HALF_EVEN)
+    println("A=$resultado")
+    
+}
+
+**********
+
+Desafio 3 de 5 – numero primo rápido
+
+Enunciado
+
+fun main(args: Array<String>) {
+    //continue a solução
+    val n =
+    
+    for (    ) {
+        
+    
+    }
+    
+}
+
+Solução 1
+
+fun main(args: Array<String>) {
+    val num = 29
+    var flag = false
+    for (i in 2..num / 2) {
+        // condition for nonprime number
+        if (num % i == 0) {
+            flag = true
+            break
+        }
+    }
+
+    if (!flag)
+        println("$num is a prime number.")
+    else
+        println("$num is not a prime number.")
+}
+
+
+Solucao 2
+
+fun main(args: Arrays<String>) {
+  //continue a solução
+
+val n = readLine()?.toInt()
+var div = 0
+
+	if(!(n<2( ){
+	for (i in 1..n) {
+	If(n%i==0) { div++ }
+
+	If(div == 2){
+ 		println("Prime")
+
+	}
+	else{
+	println("Not Prime")
+
+}
+
+}}
+
+
+Solução antiga 1
+
+fun main(args: Array<String>) { 
+val n = readLine()!!.toInt() // tamanho da lista 
+val x = mutableListOf<Int>() for (i in 0 until n) { x.add(readLine()!!.toInt()) // adiciona valores na lista
+ } 
+for (i in 0 until n){ // percorre a lista 
+var cont = 0 if ((x[i] % 2) == 0 && x[i] !== 2 || x[i] == 1) { 
+println("${x[i]} Não é primo") 
+} else { 
+println("${x[i]} Primo") 
+} } }
